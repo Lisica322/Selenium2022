@@ -1,12 +1,9 @@
-package Managers;
+package managers;
 
 import java.util.Properties;
 
 
 public class TestManager {
-
-    private final Properties properties = new Properties();
-
 
     private static TestManager INSTANCE = null;
 
@@ -17,9 +14,5 @@ public class TestManager {
             INSTANCE = new TestManager();
         }
         return INSTANCE;
-    }
-
-    public String getProperty(String key) {
-        return properties.getProperty(key);
     }
 }
