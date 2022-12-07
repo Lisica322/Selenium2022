@@ -23,11 +23,12 @@ public class HomePage extends BasePage {
     private List<WebElement> allVarieties;
 
 
-      @FindBy(xpath = "//div[@id='nav-xshop']")
+    @FindBy(xpath = "//div[@id='nav-xshop']")
     private WebElement headerArea;
 
     @FindBy(xpath = "//li[@id='nav-menu-item-3240']")
     private WebElement productsMicroGreen;
+
     @FindBy(xpath = "//li[@id='nav-menu-item-3229']//child::ul[@class='sub-menu']")
     private List<WebElement> productsList;
 
@@ -35,7 +36,6 @@ public class HomePage extends BasePage {
         waitUtilElementToBeClickable(singIn).click();
         return pageManager.getRegistrationPage().clickWindowButton();
     }
-
 
 
     public HomePage clickProductList() {
@@ -46,8 +46,9 @@ public class HomePage extends BasePage {
         return this;
     }
 
-     public ProductListPage clickAllVarieties() {
-             waitUtilElementToBeClickable(productsMicroGreen).click();
-         return pageManager.getProductListPage().clickAllProducts();
+    public ProductListPage clickAllVarieties() {
+        waitUtilElementToBeClickable(productsMicroGreen).click();
+
+        return pageManager.getProductListPage().defaultMethod();
     }
-    }
+}

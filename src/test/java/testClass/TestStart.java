@@ -2,6 +2,7 @@ package testClass;
 
 import org.junit.jupiter.api.Test;
 import testClass.BaseTest;
+import util.Quantity;
 
 public class TestStart extends BaseTest {
 
@@ -25,8 +26,16 @@ public class TestStart extends BaseTest {
 
                 .clickProductList()
                 .clickAllVarieties()
-                .clickAllProducts();
-        //       .clickSAccessories();
+                .clickAllProducts(2)
+                .chooseQuantity(Quantity.ONE_THOUSAND_GRAM)
+                .clickAdd()
+                .clickCross()
+                .clickBackToList()
+                .clickGoodForTheStart()
+                .clickAllProducts(1)
+                .chooseQuantity(Quantity.FIVE_HUNDRED_GRAMS)
+                .clickAdd()
+                .clickCross();
 
     }
 }
